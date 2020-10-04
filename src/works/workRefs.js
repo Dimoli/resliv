@@ -4,32 +4,27 @@ import { NavLink } from "react-router-dom";
 export default () => {
   return (
     <div className="btn-group" role="group" aria-label="Basic example">
-      <NavLink to="/1">
+      <NavLink to="/works/1">
         <button type="button" className="btn btn-primary">
           1
         </button>
       </NavLink>
-      <NavLink to="/2">
+      <NavLink to="/works/2">
         <button type="button" className="btn btn-primary">
           2
         </button>
       </NavLink>
-      <NavLink to="/3">
+      <NavLink to="/works/3">
         <button type="button" className="btn btn-primary">
           3
         </button>
       </NavLink>
-      <NavLink to="/4">
+      <NavLink to="/works/4&5">
         <button type="button" className="btn btn-primary">
-          4
+          4&5
         </button>
       </NavLink>
-      <NavLink to="/5">
-        <button type="button" className="btn btn-primary">
-          5
-        </button>
-      </NavLink>
-      <NavLink to="/6">
+      <NavLink to="/works/6">
         <button type="button" className="btn btn-primary">
           6
         </button>

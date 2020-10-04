@@ -1,11 +1,16 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 export default (props) => {
   const [inputValues, setInputValues] = useState(
     parseUrl(props.location.search)
   );
+  const isInitialMount = useRef(true);
 
-  useEffect(() => console.log(stringifyUrl(inputValues)), [inputValues]);
+  useEffect(() => {
+    isInitialMount.current
+      ? (isInitialMount.current = false)
+      : console.log(stringifyUrl(inputValues));
+  }, [inputValues]);
 
   const updateCheckbox = useCallback(
     (updatedInputField, value) => (updatedInputField[value] ? "" : ++value),
